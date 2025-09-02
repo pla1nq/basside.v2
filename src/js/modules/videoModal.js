@@ -13,7 +13,7 @@ export function initVideoModal() {
         height="450"
         src=""
         frameborder="0"
-        allow="autoplay; encrypted-media"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
         allowfullscreen
       ></iframe>
     </div>
@@ -26,20 +26,16 @@ export function initVideoModal() {
 
   // Открытие модального окна
   function openModal(videoId) {
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1&showinfo=0`
+    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&iv_load_policy=3&disablekb=1`
     modal.classList.add('is-open')
-
-    // Блокируем прокрутку страницы
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = 'hidden' // блокируем прокрутку
   }
 
   // Закрытие модального окна
   function closeModal() {
     iframe.src = ''
     modal.classList.remove('is-open')
-
-    // Разблокируем прокрутку
-    document.body.style.overflow = ''
+    document.body.style.overflow = '' // разблокируем прокрутку
   }
 
   closeBtn.addEventListener('click', closeModal)
