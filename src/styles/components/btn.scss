@@ -1,0 +1,35 @@
+@use '/src/styles/base/mixins' as *;
+
+.btn {
+  padding-block: 12px;
+  padding-inline: 16px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-accent);
+  background-color: transparent;
+  border: none;
+  border-radius: var(--border-radius);
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  &--tab {
+    width: 100%;
+
+    &.is-active {
+      background-color: var(--background-default);
+      pointer-events: none;
+    }
+
+    @include hover {
+      color: var(--text-inverse);
+      background-color: var(--color-accent);
+    }
+  }
+}

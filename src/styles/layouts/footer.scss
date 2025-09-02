@@ -1,0 +1,20 @@
+@use '/src/styles/base/functions' as *;
+
+.footer {
+  padding-block: fluid(30, 15);
+
+  background-color: var(--background-secondary);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 20px;
+  }
+
+	&__actions {
+		position: relative;
+		z-index: 1;
+	}
+}

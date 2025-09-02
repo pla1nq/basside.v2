@@ -1,0 +1,28 @@
+// Base
+@use 'base/normalize.scss';
+@use 'base/variables.scss';
+@use 'base/fonts.scss';
+@use 'base/globals.scss';
+@use 'base/utils.scss';
+
+// Components
+@use 'components/loader.scss';
+@use 'components/btn.scss';
+@use 'components/logo.scss';
+@use 'components/actions.scss';
+@use 'components/burger-btn.scss';
+@use 'components/mobile-nav.scss';
+@use 'components/scroll-up.scss';
+@use 'components/tabs.scss';
+@use 'components/work-card.scss';
+@use 'components/video-modal.scss';
+
+// Sections
+@use 'sections/section.scss';
+@use 'sections/hero.scss';
+@use 'sections/about.scss';
+@use 'sections/works.scss';
+
+// Layouts
+@use 'layouts/header.scss';
+@use 'layouts/footer.scss';

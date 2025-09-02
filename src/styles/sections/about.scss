@@ -1,0 +1,16 @@
+.about {
+  color: var(--icon-default);
+
+  &__content {
+    padding-block: var(--section-padding-y);
+
+    &-text {
+      max-width: 570px;
+
+      font-family: var(--second-family);
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--text-muted);
+    }
+  }
+}

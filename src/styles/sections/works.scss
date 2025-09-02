@@ -1,0 +1,15 @@
+.works {
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+	}
+
+	&__title {}
+
+	&__body {
+		padding-bottom: var(--section-padding-y);
+	}
+
+}

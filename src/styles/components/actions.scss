@@ -1,0 +1,45 @@
+@use '/src/styles/base/mixins' as *;
+
+.actions {
+	position: relative;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+
+    &::after {
+      @include square(44px);
+      @include abs-center;
+
+      content: '';
+
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+
+      transition: var(--transition-duration);
+    }
+
+    @include hover {
+      &::after {
+        background-color: var(--color-accent);
+      }
+
+      & .actions__link-icon {
+        fill: var(--background-secondary);
+      }
+    }
+
+    &-icon {
+			width: 25px;
+			height: 25px;
+      fill: var(--color-accent);
+    }
+  }
+}

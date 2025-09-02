@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1.0"
+	/>
+	<title>basside</title>
+	<link
+		rel="icon"
+		type="image/png"
+		href="/favicon-96x96.png"
+		sizes="96x96"
+	/>
+	<link
+		rel="icon"
+		type="image/svg+xml"
+		href="/favicon.svg"
+	/>
+	<link
+		rel="shortcut icon"
+		href="/favicon.ico"
+	/>
+	<link
+		rel="apple-touch-icon"
+		sizes="180x180"
+		href="/apple-touch-icon.png"
+	/>
+	<link
+		rel="manifest"
+		href="/site.webmanifest"
+	/>
+
+	<!-- Цвет панели браузера (Android Chrome + iOS Safari 15+) -->
+	<meta
+		name="theme-color"
+		content="#dac5a7"
+		media="(prefers-color-scheme: light)"
+	>
+	<meta
+		name="theme-color"
+		content="#1a1a1a"
+		media="(prefers-color-scheme: dark)"
+	>
+
+	<!-- Web App Capable -->
+	<meta
+		name="mobile-web-app-capable"
+		content="yes"
+	> <!-- современный -->
+	<meta
+		name="apple-mobile-web-app-capable"
+		content="yes"
+	> <!-- для старых iOS -->
+
+	<!-- iOS статус-бар -->
+	<meta
+		name="apple-mobile-web-app-status-bar-style"
+		content="black-translucent"
+	>
+
+	<!-- Windows Phone -->
+	<meta
+		name="msapplication-navbutton-color"
+		content="#0e0e0e"
+	>
+
+	<script
+		src="/src/js/scrips.js"
+		type="module"
+	></script>
+</head>
+
+<body>
+
+	<header class="header">
+		<div class="container">
+			<div class="header__inner">
+				<div class="header__logo">
+					<div class="logo">
+						basside<span>.</span>
+					</div>
+				</div>
+
+				<nav class="header__menu">
+					<ul class="header__menu-list">
+						<li class="header__menu-item">
+							<a
+								class="header__menu-link"
+								href="#about"
+							>
+								About me
+							</a>
+						</li>
+						<li class="header__menu-item">
+							<a
+								class="header__menu-link"
+								href="#works"
+							>
+								Works
+							</a>
+						</li>
+
+					</ul>
+				</nav>
+
+				<div class="header__actions actions">
+					<ul class="actions__list">
+						<li class="actions__item">
+							<a
+								class="actions__link"
+								href="https://www.instagram.com/kirillkorban?igsh=MWN3aWt2bzg4bTI5OQ%3D%3D&utm_source=qr"
+								rel="noopener noreferrer"
+								target="_blank"
+								aria-label="Instagram"
+							>
+								<svg
+									width="20"
+									height="20"
+									class="actions__link-icon"
+								>
+									<use xlink:href="icons/sprites.svg#instagram"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="actions__item">
+							<a
+								class="actions__link"
+								href="https://mail.google.com/mail/?view=cm&to=basside.01@gmail.com"
+								aria-label="Email"
+								rel="noopener noreferrer"
+								target="_blank"
+							>
+								<svg
+									width="20"
+									height="20"
+									class="actions__link-icon"
+								>
+									<use xlink:href="icons/sprites.svg#gmail"></use>
+								</svg>
+							</a>
+						</li>
+						<li class="actions__item">
+							<a
+								class="actions__link"
+								href="https://t.me/BASSIDE1"
+								target="_blank"
+								rel="noopener noreferrer"
+								aria-label="Telegram"
+							>
+								<svg
+									width="20"
+									height="20"
+									class="actions__link-icon"
+								>
+									<use xlink:href="icons/sprites.svg#telegram"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="header__burger">
+					<button
+						class="burger-button"
+						type="button"
+						aria-label="Open menu"
+					>
+						<svg
+							class="burger-button__svg"
+							width="40"
+							height="40"
+							viewBox="0 0 100 100"
+						>
+							<path
+								class="burger-button__line burger-button__line--1"
+								d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+							/>
+							<path
+								class="burger-button__line burger-button__line--2"
+								d="M 20,50 H 80"
+							/>
+							<path
+								class="burger-button__line burger-button__line--3"
+								d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+							/>
+						</svg>
+					</button>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<nav class="mobile-nav">
+		<ul class="mobile-nav__list">
+			<li class="mobile-nav__item">
+				<a
+					class="mobile-nav__link"
+					href="#about"
+				>
+					About me
+				</a>
+			</li>
+			<li class="mobile-nav__item">
+				<a
+					class="mobile-nav__link"
+					href="#works"
+				>
+					Works
+				</a>
+			</li>
+		</ul>
+	</nav>
+
+	<main class="main">
+
+		<section class="hero">
+			<div class="hero__inner container">
+				<h1
+					class="hero__title"
+					data-js-animate
+				>
+					Wedding Video Editor <br><span>& Storyteller</span>
+				</h1>
+			</div>
+		</section>
+
+		<section
+			class="section about"
+			id="about"
+		>
+			<div class="section__inner">
+				<header class="section__header">
+					<div class="section__header-inner container">
+						<h2
+							class="section__title about__title"
+							data-js-animate
+						>
+							About <span>me</span>
+						</h2>
+					</div>
+				</header>
+				<div class="section__body about__content">
+					<div class="section__body-inner container">
+						<div class="about__content-text">
+							<p>
+								Hi, I'm Arik Andersson - a freelancer specializing in premium web design, development, and SEO services.
+								I'm passionate about creating unique and effective solutions for my clients, and I bring a personal
+								touch
+								to every project. Let's work together to bring your vision to life!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section
+			class="section works"
+			id="works"
+			aria-labelledby="works-title"
+		>
+			<div class="section__inner works__inner">
+				<header class="section__header">
+					<div class="section__header-inner container">
+						<h2
+							class="section__title works__title"
+							id="works-title"
+							data-js-animate
+						>
+							Selected <span>Work</span>
+						</h2>
+					</div>
+				</header>
+
+				<div
+					class="section__body works__body tabs"
+					data-js-tabs
+				>
+					<h3 class="visually-hidden">
+						Works category
+					</h3>
+					<header class="tabs__header">
+						<div class="tabs__header-inner container">
+							<div
+								class="tabs__buttons "
+								role="tablist"
+								aria-labelledby="works-category-title"
+							>
+								<ul class="tabs__buttons-list">
+									<li class="tabs__buttons-item">
+										<button
+											class="tabs__button btn btn--tab is-active"
+											id="tab-1"
+											type="button"
+											role="tab"
+											aria-controls="tabpanel-1"
+											data-js-tabs-button
+											aria-selected="true"
+										>
+											Full Stories
+										</button>
+									</li>
+									<li class="tabs__buttons-item">
+										<button
+											class="tabs__button btn btn--tab"
+											id="tab-2"
+											type="button"
+											role="tab"
+											aria-controls="tabpanel-2"
+											data-js-tabs-button
+											aria-selected="false"
+											tabindex="-1"
+										>
+											Highlights
+										</button>
+									</li>
+									<li class="tabs__buttons-item">
+										<button
+											class="tabs__button btn btn--tab"
+											id="tab-3"
+											type="button"
+											role="tab"
+											aria-controls="tabpanel-3"
+											data-js-tabs-button
+											aria-selected="false"
+											tabindex="-1"
+										>
+											Reals
+										</button>
+									</li>
+									<li class="tabs__buttons-item">
+										<button
+											class="tabs__button btn btn--tab"
+											id="tab-4"
+											type="button"
+											role="tab"
+											aria-controls="tabpanel-4"
+											data-js-tabs-button
+											aria-selected="false"
+											tabindex="-1"
+										>
+											Teaser
+										</button>
+									</li>
+									<li class="tabs__buttons-item">
+										<button
+											class="tabs__button btn btn--tab"
+											id="tab-5"
+											type="button"
+											role="tab"
+											aria-controls="tabpanel-5"
+											data-js-tabs-button
+											aria-selected="false"
+											tabindex="-1"
+										>
+											Love Stories
+										</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</header>
+
+					<div class="tabs__body container">
+						<div
+							class="tabs__content is-active "
+							id="tabpanel-1"
+							aria-labelledby="tab-1"
+							tabindex="0"
+							data-js-tabs-content
+						>
+							<ul class="tabs__content-list"></ul>
+						</div>
+						<div
+							class="tabs__content"
+							id="tabpanel-2"
+							aria-labelledby="tab-2"
+							tabindex="0"
+							data-js-tabs-content
+						>
+							<ul class="tabs__content-list"></ul>
+						</div>
+						<div
+							class="tabs__content"
+							id="tabpanel-3"
+							aria-labelledby="tab-3"
+							tabindex="0"
+							data-js-tabs-content
+						>
+							<ul class="tabs__content-list"></ul>
+						</div>
+						<div
+							class="tabs__content"
+							id="tabpanel-4"
+							aria-labelledby="tab-4"
+							tabindex="0"
+							data-js-tabs-content
+						>
+							<ul class="tabs__content-list"></ul>
+						</div>
+						<div
+							class="tabs__content"
+							id="tabpanel-5"
+							aria-labelledby="tab-5"
+							tabindex="0"
+							data-js-tabs-content
+						>
+							<ul class="tabs__content-list"></ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+	<footer class="footer">
+		<div class="footer__inner container">
+
+			<div class="footer__logo">
+				<div class="logo">
+					basside<span>.</span>
+				</div>
+			</div>
+
+			<div class="footer__actions actions">
+				<ul class="actions__list">
+					<li class="actions__item">
+						<a
+							class="actions__link"
+							href="https://www.instagram.com/kirillkorban?igsh=MWN3aWt2bzg4bTI5OQ%3D%3D&utm_source=qr"
+							rel="noopener noreferrer"
+							target="_blank"
+							aria-label="Instagram"
+						>
+							<svg
+								width="20"
+								height="20"
+								class="actions__link-icon"
+							>
+								<use xlink:href="icons/sprites.svg#instagram"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="actions__item">
+						<a
+							class="actions__link"
+							href="https://mail.google.com/mail/?view=cm&to=basside.01@gmail.com"
+							aria-label="Email"
+							rel="noopener noreferrer"
+							target="_blank"
+						>
+							<svg
+								width="20"
+								height="20"
+								class="actions__link-icon"
+							>
+								<use xlink:href="icons/sprites.svg#gmail"></use>
+							</svg>
+						</a>
+					</li>
+					<li class="actions__item">
+						<a
+							class="actions__link"
+							href="https://t.me/BASSIDE1"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="Telegram"
+						>
+							<svg
+								width="20"
+								height="20"
+								class="actions__link-icon"
+							>
+								<use xlink:href="icons/sprites.svg#telegram"></use>
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+	</footer>
+
+	<div
+		class="loader"
+		id="loader"
+	>
+		<div class="loader__content"></div>
+	</div>
+
+	<div class="scroll-up">
+		<button
+			class="scroll-up__btn"
+			type="button"
+		>
+			<svg
+				class="scroll-up__btn-icon"
+				width="30"
+				height="30"
+			>
+				<use xlink:href="icons/sprites.svg#arrowUp"></use>
+			</svg>
+		</button>
+	</div>
+
+</body>
+
+</html>

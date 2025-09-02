@@ -1,0 +1,60 @@
+@use '/src/styles/base/functions' as *;
+@use '/src/styles/base/mixins' as *;
+@use '/src/styles/base/media' as *;
+
+.scroll-up {
+  position: fixed;
+  right: 25px;
+  bottom: -50%;
+
+  transition:
+    bottom var(--transition-duration),
+    transform var(--transition-duration);
+
+  // animation: move 2s infinite linear;
+
+	&.is-active {
+		bottom: 25px;
+	}
+
+  &__btn {
+    display: flex;
+
+    background-color: transparent;
+    border: none;
+
+    &::after {
+      @include square(44px);
+      @include abs-center;
+
+      content: '';
+
+      position: absolute;
+      border-radius: 50%;
+
+      background-color: var(--background-muted);
+      backdrop-filter: blur(10px);
+      border: 2px solid var(--border-default);
+
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.9);
+
+      z-index: -1;
+    }
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+      fill: var(--color-accent);
+    }
+  }
+}
+
+@keyframes move {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}

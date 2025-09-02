@@ -1,0 +1,51 @@
+@use '/src/styles/base/functions' as *;
+@use '/src/styles/base/mixins' as *;
+@use '/src/styles/base/media' as *;
+
+.section {
+  &__header {
+    padding-block: var(--section-padding-y);
+
+    background-color: var(--background-secondary);
+
+    &-inner {
+      @include mobile-above {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: 300;
+    font-size: fluid(64, 35);
+    line-height: 1.1;
+
+    color: var(--text-default);
+
+    opacity: 0;
+
+    transform: translateX(-50%);
+
+    &.is-active {
+      opacity: 1;
+      transform: translateX(0);
+      transition: all 1s 0.1s;
+    }
+
+    span {
+      font-family: var(--third-family);
+      font-style: italic;
+    }
+  }
+
+  &__body {
+    &-inner {
+
+			@include mobile-above {
+				display: flex;
+				justify-content: center;
+			}
+    }
+  }
+}

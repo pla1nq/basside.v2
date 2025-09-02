@@ -1,0 +1,63 @@
+@use 'mixins' as *;
+@use 'media' as *;
+
+html {
+  &.is-lock {
+    overflow: hidden;
+    height: 100%;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+
+  color: var(--color-white);
+  background-color: var(--background-default);
+}
+
+main {
+  flex-grow: 1;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  @include focus-visible;
+}
+
+::selection {
+  color: var(--background-secondary);
+  background: var(--text-default);
+}
+
+.is-lock {
+  overflow: hidden;
+}
+
+// [id]::before {
+//   content: '';
+//   display: block;
+//   height: 100px; /* высота шапки */
+//   margin-top: -100px;
+// }

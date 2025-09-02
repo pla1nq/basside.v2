@@ -1,0 +1,14 @@
+@use '/src/styles/base/mixins' as *;
+@use '/src/styles/base/functions' as *;
+
+.logo {
+  font-family: var(--second-family);
+  font-size: fluid(35, 30);
+  text-transform: none;
+  color: var(--color-accent);
+	cursor: default;
+
+  span {
+    color: var(--color-white);
+  }
+}

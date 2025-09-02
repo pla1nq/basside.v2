@@ -1,0 +1,82 @@
+@use '/src/styles/base/functions' as *;
+@use '/src/styles/base/media' as *;
+
+.hero {
+  position: relative;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--text-default);
+
+  @include mobile {
+    height: 600px;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+    background: url('./../../assets/images/hero/hero-bg.png') center / cover
+      no-repeat;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(14, 14, 14, 0.6);
+
+  }
+
+  &__title {
+    position: relative;
+
+    font-weight: 300;
+    font-size: 130px;
+    line-height: 1;
+    text-align: center;
+
+    opacity: 0;
+    transform: scale(0.9);
+
+    z-index: 3;
+
+    @media (max-width: 1280px) {
+      font-size: 90px;
+    }
+
+    @include tablet-s {
+      font-size: 75px;
+    }
+
+    @include mobile {
+      font-size: 65px;
+    }
+
+    @media (max-width: 645px) {
+      font-size: 45px;
+    }
+
+    @include mobile-s {
+      font-size: 36px;
+    }
+
+    &.is-active {
+      opacity: 1;
+      transform: scale(1);
+      transition: all 1s 0.1s;
+    }
+
+    span {
+      font-family: var(--third-family);
+      font-style: italic;
+    }
+  }
+}
